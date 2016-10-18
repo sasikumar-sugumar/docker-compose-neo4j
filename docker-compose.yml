@@ -1,0 +1,13 @@
+version: '2'
+services:
+ neo4j:
+  image: neo4j:latest
+  environment:
+   - NEO4J_AUTH=neo4j/enigma
+   - NEO4J_HEAP_MEMORY=2048
+   - NEO4J_CACHE_MEMORY=1G
+  volumes:
+   - ./db/dbms:/data/dbms
+  ports: 
+   - "7474"
+ 
